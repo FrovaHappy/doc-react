@@ -1,16 +1,20 @@
 {
   "compilerOptions": {
-    "target": "ES2022",
-    "module": "Node16",
-    "jsx": "react",
-    "rootDir": "./src",
-    "outDir": "./dist",
-    "esModuleInterop": true,
-    "resolveJsonModule": true,
-    "forceConsistentCasingInFileNames": true,
+    "lib": ["es2023", "DOM"],
+    "module": "node16",
+    "target": "es2022",
     "strict": true,
-    "skipLibCheck": true
-  },
-  "include": ["./src/**/*"],
-  "exclude": ["./dist"]
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "moduleResolution": "node16",
+    "jsx": "react-jsx",
+    "resolveJsonModule": true,
+    "types": ["vitest/globals", "React"],
+    "allowSyntheticDefaultImports": true,
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["src/*"]
+    }
+  }
 }
