@@ -2,6 +2,7 @@
   "name": "doc-react",
   "version": "0.1",
   "description": "A react component that rendered a documentation from mackdown",
+  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "vitest",
