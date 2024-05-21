@@ -9,3 +9,9 @@ export interface Article {
   title: string
   sections: Section[]
 }
+
+export interface Anchor {
+  title: string
+  url: string
+  space: number
+}
