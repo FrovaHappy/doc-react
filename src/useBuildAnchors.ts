@@ -12,7 +12,6 @@ export default function useBuildAnchors(docStr: string): Anchor[] {
       h2: 1,
       h3: 2
     }
-    console.log(el)
     return {
       space: space[el.localName],
       title: el.innerHTML,
