@@ -5,7 +5,7 @@ describe('test useParseMd', () => {
     expect(await useParseMd('')).toBe('')
   })
   test('return a html string', async () => {
-    expect(await useParseMd('# hello')).toBe('<h1>hello</h1>\n')
+    expect(await useParseMd('# hello')).toBe('<h1 id="user-content-hello">hello</h1>\n')
   })
   test('return a html string with highlight', async () => {
     expect(await useParseMd('```js\nconst a = 1\n```')).toBe(
