@@ -12,7 +12,8 @@
     "test:ui": "vitest --ui",
     "test:coverage": "vitest --coverage",
     "build": "tsup",
-    "dev": "tsup --watch"
+    "dev": "tsup --watch",
+    "publish": "tsup && npm publish --access public"
   },
   "keywords": [],
   "author": "frova_happy",
