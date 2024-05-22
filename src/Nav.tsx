@@ -27,7 +27,12 @@ function Nav(props: Props) {
         <ul key={article.title}>
           <div>{article.title}</div>
           {article.sections.map(sectionActive => (
-            <NavItem section={section} sectionActive={sectionActive} setSection={setSection} />
+            <NavItem
+              section={section}
+              sectionActive={sectionActive}
+              setSection={setSection}
+              key={sectionActive.title}
+            />
           ))}
         </ul>
       ))}
