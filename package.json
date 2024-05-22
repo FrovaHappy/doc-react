@@ -1,14 +1,18 @@
 {
   "name": "doc-react",
   "version": "0.1",
-  "description": "A react component that rendered a documentation from mackdown",
+  "description": "A react component that rendered a documentation from markdown",
   "type": "module",
-  "main": "index.js",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
   "scripts": {
     "test": "vitest",
     "test:watch": "vitest --watch",
     "test:ui": "vitest --ui",
-    "test:coverage": "vitest --coverage"
+    "test:coverage": "vitest --coverage",
+    "build": "tsup",
+    "dev": "tsup --watch"
   },
   "keywords": [],
   "author": "frova_happy",
@@ -27,9 +31,7 @@
     "tsup": "^8.0.2",
     "typescript": "^5.4.5",
     "typescript-eslint": "^7.9.0",
-    "vitest": "^1.6.0"
-  },
-  "dependencies": {
+    "vitest": "^1.6.0",
     "rehype": "^13.0.1",
     "rehype-highlight": "^7.0.0",
     "remark-html": "^16.0.1",
