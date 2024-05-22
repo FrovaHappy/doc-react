@@ -1,6 +1,6 @@
 {
   "name": "doc-markdown",
-  "version": "0.1.2",
+  "version": "0.1.3",
   "description": "A react component that rendered a documentation from markdown",
   "type": "module",
   "main": "./dist/index.cjs",
