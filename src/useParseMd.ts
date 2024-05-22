@@ -1,16 +1,17 @@
-import { rehype } from 'rehype'
 import rehypeHighlight from 'rehype-highlight'
-import remarkHtml from 'remark-html'
 import remarkParse from 'remark-parse'
 import remarkHeadingId from 'remark-heading-id'
-import { unified } from 'unified'
+import { remark } from 'remark'
+import remarkRehype from 'remark-rehype'
+import rehypeStringify from 'rehype-stringify'
 
 export default async function useParseMd(str: string) {
-  const toHtml = await unified().use(remarkHeadingId, { defaults: true }).use(remarkParse).use(remarkHtml).process(str)
-  const file = await rehype()
-    .data('settings', { fragment: true })
-
+  const md = await remark()
+    .use(remarkParse)
+    .use(remarkHeadingId, { defaults: true })
+    .use(remarkRehype)
     .use(rehypeHighlight)
-    .process(String(toHtml))
-  return String(file)
+    .use(rehypeStringify)
+    .process(str)
+  return md.value
 }
